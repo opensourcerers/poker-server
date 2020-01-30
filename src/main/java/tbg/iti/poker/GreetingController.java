@@ -1,4 +1,4 @@
-package com.example.restservice;
+package tbg.iti.poker;
 
 import java.util.concurrent.atomic.AtomicLong;
 

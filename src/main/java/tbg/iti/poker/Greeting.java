@@ -1,4 +1,4 @@
-package com.example.restservice;
+package tbg.iti.poker;
 
 public class Greeting {
 
