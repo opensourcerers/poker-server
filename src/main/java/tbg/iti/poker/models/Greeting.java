@@ -1,4 +1,4 @@
-package tbg.iti.poker;
+package tbg.iti.poker.models;
 
 public class Greeting {
 
