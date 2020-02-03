@@ -2,7 +2,7 @@ package tbg.iti.poker.models;
 /*Establishes a player and an entity. Attributes hands and points to each player.
  * 
  */
-public class Player {
+public class Player extends Model {
 	private Hand hand;
 	private Integer id;
 	private String name;
