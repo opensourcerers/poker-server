@@ -1,0 +1,18 @@
+databaseChangeLog:
+    - changeSet:
+        id: 1
+        author: dossj
+        changes:
+        - sql: |
+            CREATE TABLE public.players
+            (
+              id integer NOT NULL,
+              name character varying(256),
+              points integer,
+              CONSTRAINT player_pkey PRIMARY KEY (id),
+              CONSTRAINT player_name_uniq UNIQUE (name)
+            )
+            WITH (
+              OIDS=FALSE
+            );
+        - sql: ALTER TABLE public.players OWNER TO dossj;
