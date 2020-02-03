@@ -15,4 +15,3 @@ databaseChangeLog:
             WITH (
               OIDS=FALSE
             );
-        - sql: ALTER TABLE public.players OWNER TO dossj;
