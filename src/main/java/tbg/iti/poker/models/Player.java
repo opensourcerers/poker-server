@@ -1,7 +1,19 @@
 package tbg.iti.poker.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hibernate.annotations.GenericGenerator;
+
 /*Establishes a player and an entity. Attributes hands and points to each player.
  * 
  */
+@Entity
+@Table(name = "PLAYERS")
 public class Player extends Model {
 	private Hand hand;
 	private Integer id;
@@ -11,6 +23,7 @@ public class Player extends Model {
 	/**
 	 * @return the hand
 	 */
+	@Transient
 	public Hand getHand() {
 		return hand;
 	}
@@ -25,6 +38,10 @@ public class Player extends Model {
 	/**
 	 * @return the id
 	 */
+	@Id
+	@Column(columnDefinition="int", name="ID")
+	@GeneratedValue(generator="generator")
+	@GenericGenerator(name="generator", strategy="identity")
 	public Integer getId() {
 		return id;
 	}
@@ -39,6 +56,7 @@ public class Player extends Model {
 	/**
 	 * @return the name
 	 */
+	@Column
 	public String getName() {
 		return name;
 	}
@@ -53,6 +71,7 @@ public class Player extends Model {
 	/**
 	 * @return the points
 	 */
+	@Column
 	public Integer getPoints() {
 		return points;
 	}
